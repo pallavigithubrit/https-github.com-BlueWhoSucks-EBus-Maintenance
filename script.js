@@ -29,5 +29,21 @@ function calculateChange(event) {
     
 
 }
+else{
+            const inputDate = new Date(document.getElementById("tyrechange").value);
+
+            // Get the current date
+            const currentDate = new Date();
+
+            // Calculate the difference in milliseconds
+            const timeDifference = currentDate - inputDate;
+
+            // Calculate the number of days
+            const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+            // Display the result
+            //document.getElementById("result").innerHTML = `Days passed: ${daysPassed}`;  ignore
+        }
+        
 const changeForm = document.getElementById('ChangeForm');
         changeForm.addEventListener('submit', calculateChange);
