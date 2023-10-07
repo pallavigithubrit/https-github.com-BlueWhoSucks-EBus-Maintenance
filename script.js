@@ -44,7 +44,6 @@ else{
             // Display the result
             //document.getElementById("result").innerHTML = `Days passed: ${daysPassed}`;  ignore
         }
-        
+}
 const changeForm = document.getElementById('ChangeForm');
 changeForm.addEventListener('submit', calculateChange);
-}
