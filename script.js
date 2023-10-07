@@ -46,4 +46,5 @@ else{
         }
         
 const changeForm = document.getElementById('ChangeForm');
-        changeForm.addEventListener('submit', calculateChange);
+changeForm.addEventListener('submit', calculateChange);
+}
