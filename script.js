@@ -26,7 +26,7 @@ function calculateChange(event) {
          if(travelled<rear_distance_miles){
             document.querySelector('.show').innerHTML="No need to worry"
          }
-    }
+    
 
 }
 const changeForm = document.getElementById('ChangeForm');
