@@ -25,7 +25,7 @@
         </div>
     </div>
     <br>
-    <form action="" id="ChangeForm">
+   <form action="" id="ChangeForm">
     <label for="routeDistance">Enter Your Route Distance (in km): </label>
     <br>
     
@@ -35,22 +35,32 @@
     <br>
     <input type="number" id="routetimes" name="routetimes" >
     <br><br>
-    <label for="change">Did You Change the tyre:</label>
+    <span id="t">Did You Change the tyre:</span>
     <br>
-    <input type="text" id="change" name="change">
+    <label for="change1">YES</label>
+    <input type="radio"  name="change" value="yes">
+    <br>
+    <label for="change2">NO</label>
+    <input type="radio"  name="change" value="no">
+
     <br><br>
     <label for="tyrechange">Tyre Change Date:</label>
     <br>
     <input type="date" id="tyrechange" name="tyrechange">
     <br>
     <br>
-    <label for="years">Years</label>
+    <label for="years">How many years has vehicle been used for :</label>
     <br>
     <input type="number" placeholder="Years" min="0" max="30" id="years">
-    <br>
-     <br>
+    <br><br>
     <input type="submit"  name="submit" value="Calculate Change">
+
+
+
+    
+    
 </form>
+
 <div class="show1"></div>
 <div class="show2"></div>
 <div class="show3"></div>
