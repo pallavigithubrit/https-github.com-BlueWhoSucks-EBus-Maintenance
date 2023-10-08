@@ -144,5 +144,12 @@ label{
     color:rgb(103, 241, 18);
 
   }
-
+.show1,.show2,.show3,.show4{
+        text-align: center;
+        color:antiquewhite;
+        font-size: large;
+        font-weight: 500;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin:10px;
+    }
 
