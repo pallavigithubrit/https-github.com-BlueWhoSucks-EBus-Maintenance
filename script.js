@@ -68,6 +68,12 @@ function calculateChange(event) {
 
             // Calculate the number of days
             const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const yearspassed=Math.floor(daysPassed/365);
+            if(yearspassed>6){
+                document.querySelector('.show4').innerHTML="It would be a good choice to get the vehicle serviced.";
+            }else{
+                document.querySelector('.show4').innerHTML="It is safe to use the vehicle."
+            }
 
             // Display the result
         
