@@ -40,7 +40,7 @@
     <label for="routetimes">Enter number of times per day:</label>
     <input type="number" id="routetimes" name="routetimes">
     <br><br>
-    <button type="submit" onclick="Price()">Submit</button>
+    <input type="submit" onclick="Price()">
     <br><br>
     Industrial Electricity Prices in Your Region (offpeak-per kWh):  
     <div id="curr">
@@ -53,6 +53,11 @@
     <br><br>
     Bus Driver Salary per Annum:
     <div id="DCost">
+    </div>
+    <br><br>
+    Cost to Insure the Vehicle per Annum:
+    <div id="ICost">
+
     </div>
     <script>  
     function currChange(){
@@ -76,45 +81,28 @@
         let freq= document.getElementById("routetimes").value;
         let units= 1.33*dist*freq*365;
         if(city=="nyc"){
-            let cost= units*0.08;
+            let cost= units*0.08*1.1;
             document.getElementById("ECost").innerHTML=cost+"$";
             document.getElementById("DCost").innerHTML=((dist*freq)/12.7)*26.54*365+"$";
+            document.getElementById("ICost").innerHTML=((415000*0.00001)+(((dist*freq*365))/500000*25000)+(((dist*freq*365))/30000*4000)+6500)+"$";
         }
         if(city=="ber"){
             let cost= units*0.4;
             document.getElementById("ECost").innerHTML=cost+"€";
             document.getElementById("DCost").innerHTML=30000+"€";
+            document.getElementById("ICost").innerHTML=((415000*0.00001)+(((dist*freq*365))/500000*25000)+(((dist*freq*365))/30000*4000)+6500)*0.94+"€";
         }
         if(city=="lon"){
             let cost= units*0.3;
             document.getElementById("ECost").innerHTML=cost+"£";
             document.getElementById("DCost").innerHTML=((dist*freq)/14.96)*21.89*365+"£";
+            document.getElementById("ICost").innerHTML=((415000*0.00001)+(((dist*freq*365))/500000*25000)+(((dist*freq*365))/30000*4000)+6500)*0.82+"£";
         }
         if(city=="tok"){
             let cost= units*30.96;
             document.getElementById("ECost").innerHTML=cost+"¥";
             document.getElementById("DCost").innerHTML=((dist*freq)/12.75)*2510*365+"¥";
-        }
-    }
-    function dPrice(){
-        let city= document.getElementById("city").value;
-        let dist= document.getElementById("routeDistance").value;
-        let freq= document.getElementById("routetimes").value;
-        if(city=="nyc"){
-            let cost= units*0.08;
-            document.getElementById("ECost").innerHTML=cost+"$";
-        }
-        if(city=="ber"){
-            let cost= units*0.4;
-            document.getElementById("ECost").innerHTML=cost+"€";
-        }
-        if(city=="lon"){
-            let cost= units*0.3;
-            document.getElementById("ECost").innerHTML=cost+"£";
-        }
-        if(city=="tok"){
-            let cost= units*30.96;
-            document.getElementById("ECost").innerHTML=cost+"¥";
+            document.getElementById("ICost").innerHTML=((415000*0.00001)+(((dist*freq*365))/500000*25000)+(((dist*freq*365))/30000*4000)+6500)*149.22+"¥";
         }
     }
     </script>
