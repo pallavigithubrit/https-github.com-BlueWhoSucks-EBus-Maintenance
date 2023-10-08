@@ -152,4 +152,14 @@ label{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         margin:10px;
     }
+input[type=radio]{
+     width:50%;
+     padding:12px 20px;
+     background-color: #c5c0c0;
+     margin:8px 0;
+     display:inline-block;
+     border: 3px solid #8b8484;
+     border-radius: 4px;
+     box-sizing: border-box;
+  }
 
